@@ -186,7 +186,7 @@ def predict_default(PAY_1,PAY_2,BILL_AMT1,BILL_AMT2,PAY_AMT1,PAY_AMT2,AGE,Closen
 
  
 def main():
-    st.title("Default Predictor")
+    
     st.markdown("<h1 style='text-align: center; color: red;'>Default Predictor</h1>", unsafe_allow_html=True)
     html_temp = """
     <div style="background-color:tomato;padding:10px">
@@ -208,24 +208,24 @@ def main():
     NAME = st.text_input("Name of the Client")
 
     PAY_1 = st.selectbox(
-    'PAY_1',
+    'PAY_1(Payment Delay In September)',
      (0,1,2,3,4,5,6,7,8))
     PAY_2 = st.selectbox(
-    'PAY_2',
+    'PAY_2(Payment Delay In August)',
      (0,1,2,3,4,5,6,7,8))
     
 
-    BILL_AMT1 = st.number_input("BILL_AMT1")
+    BILL_AMT1 = st.number_input("BILL_AMT1(Amount of Bill Statement In September)")
     BILL_AMT1=int(BILL_AMT1)
     
-    BILL_AMT2 = st.number_input("BILL_AMT2")
+    BILL_AMT2 = st.number_input("BILL_AMT2(Amount of Bill Statement In August)")
     BILL_AMT2=int(BILL_AMT2)
   
     
-    PAY_AMT1 = st.number_input("PAY_AMT1")
+    PAY_AMT1 = st.number_input("PAY_AMT1(Amount of Previous Payment In September)")
     PAY_AMT1=int(PAY_AMT1)
 
-    PAY_AMT2 = st.number_input("PAY_AMT2")
+    PAY_AMT2 = st.number_input("PAY_AMT2(Amount of Previous Payment In August)")
     PAY_AMT2=int(PAY_AMT2)
    
 
@@ -239,11 +239,11 @@ def main():
 #     Closeness_4 = st.number_input("Closeness_4")
 # =============================================================================
     #Closeness_6 = st.text_input("Closeness_6","Repayment Status in April")
-    LIMIT_BAL=st.number_input("LIMIT_BAL")
+    LIMIT_BAL=st.number_input("LIMIT_BAL(Credit Limit Given to the Person)")
     LIMIT_BAL=int(LIMIT_BAL)
    
     
-    BILL_AMT4=st.number_input("BILL_AMT4")
+    BILL_AMT4=st.number_input("BILL_AMT4(Amount of Bill Statement In June)")
     BILL_AMT4=int(BILL_AMT4)
 
 
